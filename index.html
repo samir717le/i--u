@@ -57,20 +57,21 @@
 
     <script>
         document.getElementById('nameForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            var name = document.getElementById('name').value;
-            if (name == "shorna" || name == "Shorna" || name == "sorna") {
-                document.getElementById('message').textContent = 'I like you ' + name;
-                document.title = "I Love You"
-            } else if (name === "alif" || name == "sorob" || name == "Sorov") {
-                document.getElementById('message').textContent = 'You Are My Best Friends' + name;
-                document.title = "You're My Best Friend"
-            }
-             else {
-                document.getElementById('message').textContent = 'I fuck you ' + name;
-                 document.title = "I Fuck You"
-            }
-        });
+    event.preventDefault();
+    var name = document.getElementById('name').value.toLowerCase(); // Convert input to lowercase
+
+    if (name === "shorna" || name === "sorna") {
+        document.getElementById('message').textContent = 'I like you ' + name;
+        document.title = "I Love You";
+    } else if (name === "alif" || name === "sorob" || name === "sorov") {
+        document.getElementById('message').textContent = 'You Are My Best Friends ' + name;
+        document.title = "You're My Best Friend";
+    } else {
+        document.getElementById('message').textContent = 'I fuck you ' + name;
+        document.title = "I Fuck You";
+    }
+});
+        
     </script>
 </body>
 </html>
