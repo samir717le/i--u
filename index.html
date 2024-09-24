@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I Fuck You</title>
+    <title>I ---- You</title>
     <style>
         body {
             background-color: #121212;
@@ -59,7 +59,14 @@
         document.getElementById('nameForm').addEventListener('submit', function(event) {
             event.preventDefault();
             var name = document.getElementById('name').value;
-            document.getElementById('message').textContent = 'I fuck you ' + name;
+            if (name == "shorna" || name == "Shorna" || name == "sorna") {
+                document.getElementById('message').textContent = 'I like you ' + name;
+            } else if (name === "alif" || name == "sorob" || name == "Sorov") {
+                document.getElementById('message').textContent = 'You Are My Best Friends' + name;
+            }
+             else {
+                document.getElementById('message').textContent = 'I fuck you ' + name;
+            }
         });
     </script>
 </body>
